@@ -8,9 +8,9 @@ import socket
 import tarfile
 import tempfile
 from datetime import datetime
-from multiprocessing import Pool
 
 import torch
+from torch.multiprocessing import Pool
 from tqdm.auto import tqdm
 from transformers import cached_path
 

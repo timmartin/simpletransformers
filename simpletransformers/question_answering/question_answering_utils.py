@@ -11,10 +11,10 @@ import re
 import string
 from functools import partial
 from io import open
-from multiprocessing import Pool, cpu_count
 from pprint import pprint
 
 import torch
+from torch.multiprocessing import Pool, cpu_count
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import (
     DataLoader,

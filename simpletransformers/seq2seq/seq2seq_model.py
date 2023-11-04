@@ -5,7 +5,6 @@ import os
 import random
 import warnings
 from dataclasses import asdict
-from multiprocessing import Pool, cpu_count
 from pathlib import Path
 
 import numpy as np
@@ -13,6 +12,7 @@ import pandas as pd
 import torch
 import transformers
 from torch.utils.tensorboard import SummaryWriter
+from torch.multiprocessing import Pool, cpu_count
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader, Dataset, RandomSampler, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
@@ -1316,7 +1316,7 @@ class Seq2SeqModel:
                     num_return_sequences=self.args.num_return_sequences,
                 )
             elif self.args.model_type in ["mbart"]:
-                
+
                 # tgt_lang_token = self.decoder_tokenizer._convert_token_to_id_with_added_voc(
                 #     self.args.tgt_lang
                 # )
@@ -1337,7 +1337,7 @@ class Seq2SeqModel:
                     num_return_sequences=self.args.num_return_sequences,
                 )
             elif self.args.model_type in ["mbart50"]:
-                
+
                 # tgt_lang_token = self.decoder_tokenizer._convert_token_to_id_with_added_voc(
                 #     self.args.tgt_lang
                 # )

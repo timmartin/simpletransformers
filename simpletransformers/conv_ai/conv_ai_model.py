@@ -14,7 +14,6 @@ import warnings
 from collections import defaultdict
 from dataclasses import asdict
 from itertools import chain
-from multiprocessing import cpu_count
 
 import numpy as np
 import pandas as pd

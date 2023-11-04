@@ -1,7 +1,6 @@
 import logging
 import os
 import pickle
-from multiprocessing import Pool
 from functools import partial
 from typing import Tuple
 
@@ -10,6 +9,7 @@ import torch
 import transformers
 from tokenizers.implementations import ByteLevelBPETokenizer
 from tokenizers.processors import BertProcessing
+from torch.multiprocessing import Pool
 from torch.utils.data import Dataset
 from tqdm.auto import tqdm
 from transformers import PreTrainedTokenizer

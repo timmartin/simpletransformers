@@ -11,7 +11,6 @@ import os
 import random
 import warnings
 from dataclasses import asdict
-from multiprocessing import cpu_count
 from typing import Dict, List
 
 import numpy as np
@@ -23,6 +22,7 @@ from sklearn.metrics import (
     matthews_corrcoef,
     mean_squared_error,
 )
+from torch.multiprocessing import cpu_count
 from torch.utils.tensorboard import SummaryWriter
 from tokenizers import BertWordPieceTokenizer, ByteLevelBPETokenizer
 from tokenizers.implementations import (

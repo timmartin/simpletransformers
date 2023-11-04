@@ -7,7 +7,6 @@ import os
 import random
 import warnings
 from dataclasses import asdict
-from multiprocessing import cpu_count
 
 import numpy as np
 import pandas as pd
@@ -19,6 +18,7 @@ from sklearn.metrics import (
     matthews_corrcoef,
     mean_squared_error,
 )
+from torch.multiprocessing import cpu_count
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
 from torch.utils.data.distributed import DistributedSampler

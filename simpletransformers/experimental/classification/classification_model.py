@@ -9,7 +9,6 @@ import math
 import os
 import random
 import warnings
-from multiprocessing import cpu_count
 
 import numpy as np
 import torch
@@ -21,6 +20,7 @@ from sklearn.metrics import (
     mean_squared_error,
 )
 from torch.utils.tensorboard import SummaryWriter
+from torch.multiprocessing import cpu_count
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
 from torch.utils.data.distributed import DistributedSampler

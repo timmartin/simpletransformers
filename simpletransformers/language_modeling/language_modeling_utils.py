@@ -1,10 +1,10 @@
 import logging
 import os
 import pickle
-from multiprocessing import Pool
 from typing import Tuple
 
 import torch
+from torch.multiprocessing import Pool
 from torch.utils.data import Dataset
 from datasets import load_dataset
 from tqdm.auto import tqdm

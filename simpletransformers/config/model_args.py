@@ -2,9 +2,9 @@ import json
 import os
 import sys
 from dataclasses import asdict, dataclass, field, fields
-from multiprocessing import cpu_count
 import warnings
 
+from torch.multiprocessing import cpu_count
 from torch.utils.data import Dataset
 
 

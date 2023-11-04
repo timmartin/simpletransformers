@@ -24,7 +24,6 @@ import os
 import sys
 from collections import Counter
 from io import open
-from multiprocessing import Pool, cpu_count
 
 try:
     from collections import Iterable, Mapping
@@ -36,6 +35,7 @@ import torch.nn as nn
 from scipy.stats import pearsonr, spearmanr
 from sklearn.metrics import f1_score, matthews_corrcoef
 
+from torch.multiprocessing import Pool, cpu_count
 from torch.utils.data import Dataset
 from datasets import load_dataset
 from datasets import Dataset as HFDataset

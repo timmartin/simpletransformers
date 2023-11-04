@@ -21,7 +21,6 @@ import linecache
 import logging
 import os
 from io import open
-from multiprocessing import Pool, cpu_count
 
 try:
     from collections import Iterable, Mapping
@@ -31,6 +30,7 @@ except ImportError:
 import pandas as pd
 import torch
 from torch.functional import split
+from torch.multiprocessing import Pool, cpu_count
 from torch.nn import CrossEntropyLoss
 from torch.utils.data import Dataset
 from tqdm.auto import tqdm

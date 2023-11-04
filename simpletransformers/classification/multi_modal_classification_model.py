@@ -11,7 +11,6 @@ import os
 import random
 import warnings
 from dataclasses import asdict
-from multiprocessing import cpu_count
 
 import numpy as np
 import pandas as pd
@@ -35,6 +34,7 @@ from transformers.optimization import (
     get_cosine_with_hard_restarts_schedule_with_warmup,
     get_polynomial_decay_schedule_with_warmup,
 )
+from torch.multiprocessing import cpu_count
 from torch.optim import AdamW
 from transformers.optimization import Adafactor
 from transformers import (

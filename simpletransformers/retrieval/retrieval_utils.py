@@ -1,7 +1,6 @@
 import logging
 import os
 import pickle
-from multiprocessing import Pool
 from functools import partial
 from simpletransformers.seq2seq.seq2seq_utils import add_faiss_index_to_dataset
 from datasets.load import load_from_disk
@@ -10,6 +9,7 @@ import torch
 import transformers
 import numpy as np
 
+from torch.multiprocessing import Pool
 from torch.utils.data import Dataset
 from tqdm.auto import tqdm
 

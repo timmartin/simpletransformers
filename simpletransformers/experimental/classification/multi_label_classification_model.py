@@ -1,6 +1,5 @@
-from multiprocessing import cpu_count
-
 import torch
+from torch.multiprocessing import cpu_count
 from transformers import (
     WEIGHTS_NAME,
     AlbertConfig,

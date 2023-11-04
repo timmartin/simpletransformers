@@ -10,7 +10,6 @@ import os
 import random
 import warnings
 from dataclasses import asdict
-from multiprocessing import cpu_count
 import tempfile
 from pathlib import Path
 
@@ -30,6 +29,7 @@ from sklearn.metrics import (
     average_precision_score,
 )
 from torch.utils.tensorboard import SummaryWriter
+from torch.multiprocessing import cpu_count
 from torch.nn import CrossEntropyLoss
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
 from torch.utils.data.distributed import DistributedSampler

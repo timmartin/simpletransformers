@@ -5,7 +5,6 @@ import os
 import random
 import warnings
 from dataclasses import asdict
-from multiprocessing import Pool, cpu_count
 from os import truncate
 from pathlib import Path
 
@@ -13,6 +12,7 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.tensorboard import SummaryWriter
+from torch.multiprocessing import Pool, cpu_count
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader, Dataset, RandomSampler, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler

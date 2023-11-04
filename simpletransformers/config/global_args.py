@@ -1,5 +1,5 @@
 import sys
-from multiprocessing import cpu_count
+from torch.multiprocessing import cpu_count
 
 global_args = {
     "adam_epsilon": 1e-8,

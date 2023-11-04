@@ -2,10 +2,10 @@ import logging
 import os
 import random
 import warnings
-from multiprocessing import cpu_count
 
 import numpy as np
 import torch
+from torch.multiprocessing import cpu_count
 from transformers import (
     WEIGHTS_NAME,
     AlbertConfig,
